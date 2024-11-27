@@ -4,6 +4,5 @@ joblib
 pandas
 matplotlib
 seaborn
-os
 datetime
 sklearn
