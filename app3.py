@@ -4,7 +4,7 @@ import joblib
 
 model = joblib.load('model.pkl')
 
-st.set_page_config(page_title="Different Data Science Roles Salary Prediction", page_icon="💼", layout="centere")
+st.set_page_config(page_title="Different Data Science Roles Salary Prediction", page_icon="💼", layout="wide")
 st.title("💼 Data Science Salary Predictor")
 st.markdown("Predict salaries for various data science roles based on your inputs. Get insights and plan your career effectively!")
 
