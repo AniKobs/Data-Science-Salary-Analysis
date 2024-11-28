@@ -10,7 +10,7 @@ st.markdown("Predict salaries for various data science roles based on your input
 
 st.sidebar.header("Kindly provide your job details:")
 experience = st.sidebar.selectbox("🧑‍💻 What's your level of experience", ['Senior level', 'Mid-level', 'Entry level', 'Experienced level'])
-employment = st.sidebar.selectbox("📋 Your type of employment", ['Full time', 'Part timeT', 'Contract', 'Freelance'])
+employment = st.sidebar.selectbox("📋 Your type of employment", ['Full time', 'Part time', 'Contract', 'Freelance'])
 company = st.sidebar.selectbox("🏢 What is your company size", ['Large', 'Middle', 'Small'])
 job = st.sidebar.selectbox("💻 Choose your job title", ['Data Scientist', 'Data Analyst', 'Data Engineer', 'Data Architect'])
 
@@ -27,8 +27,7 @@ job_title = job_mapping[job]
 
 features = np.array([[experience_level, employment_type, company_size, job_title]])
 padded_input = np.zeros(8)
-padded_input = features
-
+padded_input[:4] = features
 padded_input = padded_input.reshape(1, -1)
 
 st.subheader("Salary Prediction")
@@ -37,7 +36,7 @@ if st.button("💰 Predict Salary"):
     st.success(f"🤑 Predicted Salary: **${prediction[0]:,.2f}**")
     st.balloons()
 
-
+# Add Additional Information Section
 st.markdown("---")
 st.subheader("💡 About This App")
 st.write("""
