@@ -25,10 +25,10 @@ company_size = company_mapping[company]
 job_title = job_mapping[job]
 
 
-features = np.array([[experience_level, employment_type, company_size, job_title]])
+features = np.array([experience_level, employment_type, company_size, job_title])
 padded_input = np.zeros(8)
 padded_input[:4] = features
-padded_input = padded_input.reshape(1, -1)
+padded_input = padded_input
 
 st.subheader("Salary Prediction")
 if st.button("💰 Predict Salary"):
