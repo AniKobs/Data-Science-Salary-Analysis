@@ -28,10 +28,10 @@ job_title = job_mapping[job]
 features = np.array([[experience_level, employment_type, company_size, job_title]])
 padded_input = np.zeros(8)
 #padded_input[:4] = features
-padding_input[1] = features[0,0]
-padding_input[2] = features[0,1]
-padding_input[7] = features[0,2]
-padding_input[3] = features[0,3]
+padded_input[1] = features[0,0]
+padded_input[2] = features[0,1]
+padded_input[7] = features[0,2]
+padded_input[3] = features[0,3]
 padded_input = padded_input.reshape(1, -1)
 
 st.subheader("Salary Prediction")
