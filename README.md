@@ -1,1 +1,1 @@
-# Data-Science-Salary-Analysis
+# Data Science Jobs Salary Prediction project
